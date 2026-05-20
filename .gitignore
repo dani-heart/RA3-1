@@ -1,0 +1,10 @@
+# Ignorar a pasta do trabalho antigo
+RA2-18/
+
+# Ignorar arquivos de cache do Python e de Testes
+__pycache__/
+.pytest_cache/
+
+# Ignorar arquivos gerados pelo nosso compilador
+output_*.s
+arvore_*.json
