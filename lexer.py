@@ -97,8 +97,12 @@ def lerTokens(caminho_arquivo: str) -> list[Token]:
             conteudo_completo = f.read()
 
         # Fase 3: Remove comentários em bloco *{ ... }* antes de tokenizar.
-        # re.DOTALL faz o '.' corresponder a quebras de linha também.
-        conteudo_sem_comentarios = re.sub(r'\*\{.*?\}\*', '', conteudo_completo, flags=re.DOTALL)
+        # Para não quebrar a contagem de linhas em caso de erros posteriores, 
+        # substituímos o bloco pela exata quantidade de quebras de linha que ele possuía.
+        def _preservar_linhas(match):
+            return '\n' * match.group(0).count('\n')
+            
+        conteudo_sem_comentarios = re.sub(r'\*\{.*?\}\*', _preservar_linhas, conteudo_completo, flags=re.DOTALL)
 
         for num_linha, linha_texto in enumerate(conteudo_sem_comentarios.splitlines(), start=1):
                 

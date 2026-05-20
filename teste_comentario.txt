@@ -1,0 +1,6 @@
+(START)
+*{ Este eh um
+comentario em bloco 
+de multiplas linhas }*
+(10 20 +)
+*{ outro }* (END)
