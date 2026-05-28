@@ -34,9 +34,10 @@ class No:
     valor: Optional[str]
     filhos: list
     linha: int
+    tipo_dado: Optional[str] = None # Fase 3: int, double ou bool (Árvore Atribuída)
 
     def __repr__(self) -> str:
-        return f"No(tipo={self.tipo!r}, valor={self.valor!r}, filhos={self.filhos!r}, linha={self.linha})"
+        return f"No(tipo={self.tipo!r}, valor={self.valor!r}, tipo_dado={self.tipo_dado!r}, filhos={self.filhos!r}, linha={self.linha})"
 
 
 # ---------------------------------------------------------------------------
@@ -108,10 +109,11 @@ def imprimir_arvore(no: No, indent: int = 0) -> None:
     # Recursiva porque a árvore é recursiva. indent cresce a cada nível de filho.
     # Nós sem valor (compostos) mostram só o tipo; folhas mostram o valor literal.
     prefixo = "  " * indent
+    tipo_str = f" : {no.tipo_dado}" if no.tipo_dado else ""
     if no.valor is not None:
-        print(f"{prefixo}[{no.tipo}] '{no.valor}'  (linha {no.linha})")
+        print(f"{prefixo}[{no.tipo}{tipo_str}] '{no.valor}'  (linha {no.linha})")
     else:
-        print(f"{prefixo}[{no.tipo}]  (linha {no.linha})")
+        print(f"{prefixo}[{no.tipo}{tipo_str}]  (linha {no.linha})")
     for filho in no.filhos:
         imprimir_arvore(filho, indent + 1)
 
@@ -122,6 +124,7 @@ def _no_para_dict(no: No) -> dict:
         "tipo": no.tipo,
         "valor": no.valor,
         "linha": no.linha,
+        "tipo_dado": no.tipo_dado,
         "filhos": [_no_para_dict(f) for f in no.filhos]
     }
 

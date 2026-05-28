@@ -1,8 +1,7 @@
 # Integrantes do grupo (ordem alfabética):
 # Dani Heart Basso - @dani-heart
-# Mariana Alves da Silva - @himarialves
 #
-# Nome do grupo no Canvas: RA2-18
+# Nome do grupo no Canvas: RA3-1
 
 import sys
 import os
@@ -12,6 +11,7 @@ from parser import ErroSintatico
 from arvore import gerarArvore, imprimir_arvore, salvar_arvore_json
 from assembly import gerarAssembly
 from lexer import lerTokens
+from semantico import AnalisadorSemantico, salvar_tabela_json
 
 
 def main() -> None:
@@ -32,6 +32,7 @@ def main() -> None:
     base = os.path.splitext(os.path.basename(caminho))[0]
     caminho_saida_asm = f"output_{base}.s"
     caminho_saida_json = f"arvore_{base}.json"
+    caminho_saida_tabela = f"tabela_simbolos_{base}.json"
 
     print("[2/4] Construindo tabela LL(1)...")
     tabela = construirTabelaLL1()
@@ -45,11 +46,28 @@ def main() -> None:
 
     print("Árvore sintática construída.")
     print()
+
+    print("[3.5/4] Analisando semanticamente...")
+    analisador_semantico = AnalisadorSemantico(arvore)
+    tabela_simbolos, erros_semanticos = analisador_semantico.analisar()
+
+    if erros_semanticos:
+        print("\n*                   Erros Semânticos                   *")
+        for erro in erros_semanticos:
+            print(f" -> {erro}")
+        print("********************************************************\n")
+        print("Aviso: Geração de Assembly interrompida devido a erros semânticos.")
+        sys.exit(1)
+
+    print("Análise semântica concluída sem erros.")
+    print()
+
     print("*                   Árvore Sintática                   *")
     imprimir_arvore(arvore)
     print()
 
     salvar_arvore_json(arvore, caminho_saida_json)
+    salvar_tabela_json(tabela_simbolos, caminho_saida_tabela)
 
     print("[4/4] Gerando Assembly ARMv7...")
     codigo_asm = gerarAssembly(arvore)
