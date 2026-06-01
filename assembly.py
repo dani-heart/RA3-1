@@ -1,8 +1,7 @@
 # Integrantes do grupo (ordem alfabética):
 # Dani Heart Basso - @dani-heart
-# Mariana Alves da Silva - @himarialves
 #
-# Nome do grupo no Canvas: RA2-18
+# Nome do grupo no Canvas: RA3-1
 
 
 from arvore import No
@@ -340,7 +339,7 @@ def _gerar_programa(no: No) -> str:
     linhas: list[str] = []
 
     linhas.append(".text")
-    linhas.append("@ Assembly ARMv7 gerado automaticamente — RA2-18")
+    linhas.append("@ Assembly ARMv7 gerado automaticamente — RA3-1")
     linhas.append("@ Plataforma: CPulator ARMv7 DEC1-SOC v16.1")
     linhas.append("")
     linhas.append(".global _start")

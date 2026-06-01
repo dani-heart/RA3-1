@@ -1,8 +1,7 @@
 # Integrantes do grupo (ordem alfabética):
 # Dani Heart Basso - @dani-heart
-# Mariana Alves da Silva - @himarialves
 #
-# Nome do grupo no Canvas: RA2-18
+# Nome do grupo no Canvas: RA3-1
 
 
 

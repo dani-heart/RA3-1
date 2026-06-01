@@ -1,8 +1,7 @@
 # Integrantes do grupo (ordem alfabética):
 # Dani Heart Basso - @dani-heart
-# Mariana Alves da Silva - @himarialves
 #
-# Nome do grupo no Canvas: RA2-18
+# Nome do grupo no Canvas: RA3-1
 
 from typing import Any, Optional, Protocol
 
@@ -32,7 +31,7 @@ class ConstrutorArvore(Protocol):
     def criar_operador(self, simbolo: str, linha: int) -> Any: ...
     def criar_expr(self, esq: Any, dir: Any, op: Any, linha: int) -> Any: ...
     def criar_cmd_res(self, n: str, linha: int) -> Any: ...
-    def criar_cmd_mem_store(self, valor: str, nome: str, linha: int) -> Any: ...
+    def criar_cmd_mem_store(self, valor_no: Any, nome: str, linha: int) -> Any: ...
     def criar_cmd_mem_load(self, nome: str, linha: int) -> Any: ...
     def criar_bloco(self, cmds: list, linha: int) -> Any: ...
     def criar_if(self, cond: Any, bloco: Any, linha: int) -> Any: ...
@@ -190,7 +189,8 @@ class _Parser:
 
         elif tipo == "MEM":
             tok_mem = self._consumir("MEM")
-            return self._builder.criar_cmd_mem_store(primeiro.valor, tok_mem.valor, linha)
+            valor_no = self._builder.criar_operando_num(primeiro.valor, linha)
+            return self._builder.criar_cmd_mem_store(valor_no, tok_mem.valor, linha)
 
         elif tipo in ("NUM_INT", "NUM_REAL", "LPAREN"):
             # Expressão RPN: primeiro já foi lido, agora lemos segundo operando e operador.

@@ -1,8 +1,7 @@
 # Integrantes do grupo (ordem alfabética):
 # Dani Heart Basso - @dani-heart
-# Mariana Alves da Silva - @himarialves
 #
-# Nome do grupo no Canvas: RA2-18
+# Nome do grupo no Canvas: RA3-1
 
 """Construtor de árvore sintática e utilitários de serialização.
 
@@ -69,10 +68,9 @@ class ConstrutorNo:
         n_no = No(tipo="OPERANDO", valor=n, filhos=[], linha=linha)
         return No(tipo="CMD_RES", valor=None, filhos=[n_no], linha=linha)
 
-    def criar_cmd_mem_store(self, valor: str, nome: str, linha: int) -> No:
+    def criar_cmd_mem_store(self, valor_no: No, nome: str, linha: int) -> No:
         # filhos[0] = valor a armazenar, filhos[1] = nome da variável.
         # Ordem importa: assembly.py desestrutura nessa sequência.
-        valor_no = No(tipo="OPERANDO", valor=valor, filhos=[], linha=linha)
         mem_id = No(tipo="MEM_ID", valor=nome, filhos=[], linha=linha)
         return No(tipo="CMD_MEM_STORE", valor=None, filhos=[valor_no, mem_id], linha=linha)
 
