@@ -1,16 +1,31 @@
 (START)
-(3 4 +)
-(10 3 -)
-(6 7 *)
-(20 4 /)
-(17 5 %)
-(2 10 ^)
-(9.0 3.0 |)
-(10 VALOR)
-(1 CONT)
-(VALOR)
-(1 RES)
-( ((VALOR) 5 >) (LET (100 RESULTADO) ) IF )
-( ((CONT) 1 ==) (LET (0 CONT) ) WHILE )
+*{ TESTE 1: Intensivao de Inteiros }*
+*{ Foco em inteiros, mas contem TODAS as operacoes exigidas na rubrica }*
+
+(10 5 +)
+(20 4 -)
+(3 6 *)
+(15 3 /)
+(10 3 %)
+(2 4 ^)
+(10.5 2.0 |)
+
+*{ Variaveis e Aninhamento }*
+(10 VARA)
+(5 VARB)
+( ((VARA) (VARB) +) 2 * )
+
+*{ Comandos Especiais }*
 (2 RES)
+(VARA)
+
+*{ Controle de Fluxo: IF e WHILE }*
+( ((VARA) 10 ==) (LET
+  (100 RESULTADO)
+) IF )
+
+(1 CONTADOR)
+( ((CONTADOR) 1 ==) (LET
+  (0 CONTADOR)
+) WHILE )
 (END)

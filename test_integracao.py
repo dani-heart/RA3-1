@@ -1,8 +1,7 @@
 # Integrantes do grupo (ordem alfabética):
 # Dani Heart Basso - @dani-heart
-# Mariana Alves da Silva - @himarialves
 #
-# Nome do grupo no Canvas: RA2-18
+# Nome do grupo no Canvas: RA3-1
 
 """Testes de integração: pipeline completo lexer → parser → árvore → assembly."""
 
@@ -12,12 +11,21 @@ from gramatica import construirTabelaLL1
 from arvore import gerarArvore, No
 from assembly import gerarAssembly
 from parser import ErroSintatico
+from semantico import AnalisadorSemantico
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 def _pipeline(caminho: str):
-    tokens = lerTokens(caminho)
+    tokens = lerTokens(os.path.join(BASE_DIR, caminho))
     tabela = construirTabelaLL1()
     arvore = gerarArvore(tokens, tabela)
+    
+    analisador = AnalisadorSemantico(arvore)
+    _, erros = analisador.analisar()
+    assert len(erros) == 0, f"Erros semânticos encontrados: {erros}"
+
     asm = gerarAssembly(arvore)
     return arvore, asm
 
@@ -44,6 +52,34 @@ def test_pipeline_completo_teste3():
     assert arvore.tipo == "PROGRAMA"
     assert "_start:" in asm
 
+def test_pipeline_completo_teste_boss():
+    arvore, asm = _pipeline("teste_boss.txt")
+    assert arvore.tipo == "PROGRAMA"
+    assert "_start:" in asm
+
+def test_pipeline_completo_teste_comentario():
+    arvore, asm = _pipeline("teste_comentario.txt")
+    assert arvore.tipo == "PROGRAMA"
+    assert len(arvore.filhos) > 0
+
+def test_pipeline_falha_teste_erro_semantico():
+    tokens = lerTokens(os.path.join(BASE_DIR, "teste_erro_semantico.txt"))
+    tabela = construirTabelaLL1()
+    arvore = gerarArvore(tokens, tabela)
+    analisador = AnalisadorSemantico(arvore)
+    _, erros = analisador.analisar()
+    
+    assert len(erros) > 0, "Deveria ter detectado erros semânticos!"
+
+def test_pipeline_falha_teste_tipo_base():
+    tokens = lerTokens(os.path.join(BASE_DIR, "teste_tipo_base.txt"))
+    tabela = construirTabelaLL1()
+    arvore = gerarArvore(tokens, tabela)
+    analisador = AnalisadorSemantico(arvore)
+    _, erros = analisador.analisar()
+    
+    assert len(erros) > 0, "Deveria falhar ao misturar int com double!"
+
 
 # ---------------------------------------------------------------------------
 # Caminho feliz — verificações de conteúdo do assembly
@@ -64,7 +100,7 @@ def test_assembly_tem_secao_data_com_res_hist():
 
 def test_assembly_tem_variaveis_mem_em_data():
     _, asm = _pipeline("teste1.txt")
-    assert "VALOR:" in asm or "CONT:" in asm
+    assert "VARA:" in asm or "CONTADOR:" in asm
 
 def test_assembly_tem_constante_float_como_double():
     _, asm = _pipeline("teste1.txt")

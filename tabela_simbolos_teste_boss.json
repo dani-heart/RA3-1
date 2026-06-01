@@ -1,0 +1,22 @@
+{
+  "X": {
+    "nome": "X",
+    "linha_definicao": 5,
+    "tipo_inferido": "double",
+    "linhas_uso": [
+      8,
+      8,
+      8,
+      13,
+      14
+    ]
+  },
+  "ATIVO": {
+    "nome": "ATIVO",
+    "linha_definicao": 10,
+    "tipo_inferido": "int",
+    "linhas_uso": [
+      12
+    ]
+  }
+}

@@ -1,0 +1,434 @@
+{
+  "tipo": "PROGRAMA",
+  "valor": null,
+  "linha": 1,
+  "tipo_dado": null,
+  "filhos": [
+    {
+      "tipo": "EXPR",
+      "valor": null,
+      "linha": 2,
+      "tipo_dado": "int",
+      "filhos": [
+        {
+          "tipo": "OPERANDO",
+          "valor": "3",
+          "linha": 2,
+          "tipo_dado": "int",
+          "filhos": []
+        },
+        {
+          "tipo": "OPERANDO",
+          "valor": "4",
+          "linha": 2,
+          "tipo_dado": "int",
+          "filhos": []
+        },
+        {
+          "tipo": "OP",
+          "valor": "+",
+          "linha": 2,
+          "tipo_dado": null,
+          "filhos": []
+        }
+      ]
+    },
+    {
+      "tipo": "EXPR",
+      "valor": null,
+      "linha": 3,
+      "tipo_dado": "int",
+      "filhos": [
+        {
+          "tipo": "OPERANDO",
+          "valor": "10",
+          "linha": 3,
+          "tipo_dado": "int",
+          "filhos": []
+        },
+        {
+          "tipo": "OPERANDO",
+          "valor": "3",
+          "linha": 3,
+          "tipo_dado": "int",
+          "filhos": []
+        },
+        {
+          "tipo": "OP",
+          "valor": "-",
+          "linha": 3,
+          "tipo_dado": null,
+          "filhos": []
+        }
+      ]
+    },
+    {
+      "tipo": "EXPR",
+      "valor": null,
+      "linha": 4,
+      "tipo_dado": "int",
+      "filhos": [
+        {
+          "tipo": "OPERANDO",
+          "valor": "6",
+          "linha": 4,
+          "tipo_dado": "int",
+          "filhos": []
+        },
+        {
+          "tipo": "OPERANDO",
+          "valor": "7",
+          "linha": 4,
+          "tipo_dado": "int",
+          "filhos": []
+        },
+        {
+          "tipo": "OP",
+          "valor": "*",
+          "linha": 4,
+          "tipo_dado": null,
+          "filhos": []
+        }
+      ]
+    },
+    {
+      "tipo": "EXPR",
+      "valor": null,
+      "linha": 5,
+      "tipo_dado": "int",
+      "filhos": [
+        {
+          "tipo": "OPERANDO",
+          "valor": "20",
+          "linha": 5,
+          "tipo_dado": "int",
+          "filhos": []
+        },
+        {
+          "tipo": "OPERANDO",
+          "valor": "4",
+          "linha": 5,
+          "tipo_dado": "int",
+          "filhos": []
+        },
+        {
+          "tipo": "OP",
+          "valor": "/",
+          "linha": 5,
+          "tipo_dado": null,
+          "filhos": []
+        }
+      ]
+    },
+    {
+      "tipo": "EXPR",
+      "valor": null,
+      "linha": 6,
+      "tipo_dado": "int",
+      "filhos": [
+        {
+          "tipo": "OPERANDO",
+          "valor": "17",
+          "linha": 6,
+          "tipo_dado": "int",
+          "filhos": []
+        },
+        {
+          "tipo": "OPERANDO",
+          "valor": "5",
+          "linha": 6,
+          "tipo_dado": "int",
+          "filhos": []
+        },
+        {
+          "tipo": "OP",
+          "valor": "%",
+          "linha": 6,
+          "tipo_dado": null,
+          "filhos": []
+        }
+      ]
+    },
+    {
+      "tipo": "EXPR",
+      "valor": null,
+      "linha": 7,
+      "tipo_dado": "int",
+      "filhos": [
+        {
+          "tipo": "OPERANDO",
+          "valor": "2",
+          "linha": 7,
+          "tipo_dado": "int",
+          "filhos": []
+        },
+        {
+          "tipo": "OPERANDO",
+          "valor": "10",
+          "linha": 7,
+          "tipo_dado": "int",
+          "filhos": []
+        },
+        {
+          "tipo": "OP",
+          "valor": "^",
+          "linha": 7,
+          "tipo_dado": null,
+          "filhos": []
+        }
+      ]
+    },
+    {
+      "tipo": "EXPR",
+      "valor": null,
+      "linha": 8,
+      "tipo_dado": "double",
+      "filhos": [
+        {
+          "tipo": "OPERANDO",
+          "valor": "9.0",
+          "linha": 8,
+          "tipo_dado": "double",
+          "filhos": []
+        },
+        {
+          "tipo": "OPERANDO",
+          "valor": "3.0",
+          "linha": 8,
+          "tipo_dado": "double",
+          "filhos": []
+        },
+        {
+          "tipo": "OP",
+          "valor": "|",
+          "linha": 8,
+          "tipo_dado": null,
+          "filhos": []
+        }
+      ]
+    },
+    {
+      "tipo": "CMD_MEM_STORE",
+      "valor": null,
+      "linha": 9,
+      "tipo_dado": "int",
+      "filhos": [
+        {
+          "tipo": "OPERANDO",
+          "valor": "10",
+          "linha": 9,
+          "tipo_dado": "int",
+          "filhos": []
+        },
+        {
+          "tipo": "MEM_ID",
+          "valor": "VALOR",
+          "linha": 9,
+          "tipo_dado": null,
+          "filhos": []
+        }
+      ]
+    },
+    {
+      "tipo": "CMD_MEM_STORE",
+      "valor": null,
+      "linha": 10,
+      "tipo_dado": "int",
+      "filhos": [
+        {
+          "tipo": "OPERANDO",
+          "valor": "1",
+          "linha": 10,
+          "tipo_dado": "int",
+          "filhos": []
+        },
+        {
+          "tipo": "MEM_ID",
+          "valor": "CONT",
+          "linha": 10,
+          "tipo_dado": null,
+          "filhos": []
+        }
+      ]
+    },
+    {
+      "tipo": "CMD_MEM_LOAD",
+      "valor": null,
+      "linha": 11,
+      "tipo_dado": "int",
+      "filhos": [
+        {
+          "tipo": "MEM_ID",
+          "valor": "VALOR",
+          "linha": 11,
+          "tipo_dado": "int",
+          "filhos": []
+        }
+      ]
+    },
+    {
+      "tipo": "CMD_RES",
+      "valor": null,
+      "linha": 12,
+      "tipo_dado": null,
+      "filhos": [
+        {
+          "tipo": "OPERANDO",
+          "valor": "1",
+          "linha": 12,
+          "tipo_dado": "int",
+          "filhos": []
+        }
+      ]
+    },
+    {
+      "tipo": "IF",
+      "valor": null,
+      "linha": 13,
+      "tipo_dado": null,
+      "filhos": [
+        {
+          "tipo": "EXPR",
+          "valor": null,
+          "linha": 13,
+          "tipo_dado": "bool",
+          "filhos": [
+            {
+              "tipo": "MEM_ID",
+              "valor": "VALOR",
+              "linha": 13,
+              "tipo_dado": "int",
+              "filhos": []
+            },
+            {
+              "tipo": "OPERANDO",
+              "valor": "5",
+              "linha": 13,
+              "tipo_dado": "int",
+              "filhos": []
+            },
+            {
+              "tipo": "OP",
+              "valor": ">",
+              "linha": 13,
+              "tipo_dado": null,
+              "filhos": []
+            }
+          ]
+        },
+        {
+          "tipo": "BLOCO",
+          "valor": null,
+          "linha": 13,
+          "tipo_dado": null,
+          "filhos": [
+            {
+              "tipo": "CMD_MEM_STORE",
+              "valor": null,
+              "linha": 13,
+              "tipo_dado": "int",
+              "filhos": [
+                {
+                  "tipo": "OPERANDO",
+                  "valor": "100",
+                  "linha": 13,
+                  "tipo_dado": "int",
+                  "filhos": []
+                },
+                {
+                  "tipo": "MEM_ID",
+                  "valor": "RESULTADO",
+                  "linha": 13,
+                  "tipo_dado": null,
+                  "filhos": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "WHILE",
+      "valor": null,
+      "linha": 14,
+      "tipo_dado": null,
+      "filhos": [
+        {
+          "tipo": "EXPR",
+          "valor": null,
+          "linha": 14,
+          "tipo_dado": "bool",
+          "filhos": [
+            {
+              "tipo": "MEM_ID",
+              "valor": "CONT",
+              "linha": 14,
+              "tipo_dado": "int",
+              "filhos": []
+            },
+            {
+              "tipo": "OPERANDO",
+              "valor": "1",
+              "linha": 14,
+              "tipo_dado": "int",
+              "filhos": []
+            },
+            {
+              "tipo": "OP",
+              "valor": "==",
+              "linha": 14,
+              "tipo_dado": null,
+              "filhos": []
+            }
+          ]
+        },
+        {
+          "tipo": "BLOCO",
+          "valor": null,
+          "linha": 14,
+          "tipo_dado": null,
+          "filhos": [
+            {
+              "tipo": "CMD_MEM_STORE",
+              "valor": null,
+              "linha": 14,
+              "tipo_dado": "int",
+              "filhos": [
+                {
+                  "tipo": "OPERANDO",
+                  "valor": "0",
+                  "linha": 14,
+                  "tipo_dado": "int",
+                  "filhos": []
+                },
+                {
+                  "tipo": "MEM_ID",
+                  "valor": "CONT",
+                  "linha": 14,
+                  "tipo_dado": null,
+                  "filhos": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "CMD_RES",
+      "valor": null,
+      "linha": 15,
+      "tipo_dado": null,
+      "filhos": [
+        {
+          "tipo": "OPERANDO",
+          "valor": "2",
+          "linha": 15,
+          "tipo_dado": "int",
+          "filhos": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "tipo": "PROGRAMA",
+  "valor": null,
+  "linha": 1,
+  "tipo_dado": null,
+  "filhos": [
+    {
+      "tipo": "EXPR",
+      "valor": null,
+      "linha": 5,
+      "tipo_dado": "int",
+      "filhos": [
+        {
+          "tipo": "OPERANDO",
+          "valor": "10",
+          "linha": 5,
+          "tipo_dado": "int",
+          "filhos": []
+        },
+        {
+          "tipo": "OPERANDO",
+          "valor": "20",
+          "linha": 5,
+          "tipo_dado": "int",
+          "filhos": []
+        },
+        {
+          "tipo": "OP",
+          "valor": "+",
+          "linha": 5,
+          "tipo_dado": null,
+          "filhos": []
+        }
+      ]
+    }
+  ]
+}

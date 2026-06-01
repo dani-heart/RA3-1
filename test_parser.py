@@ -1,8 +1,7 @@
 # Integrantes do grupo (ordem alfabética):
 # Dani Heart Basso - @dani-heart
-# Mariana Alves da Silva - @himarialves
 #
-# Nome do grupo no Canvas: RA2-18
+# Nome do grupo no Canvas: RA3-1
 
 import pytest
 from dataclasses import dataclass
@@ -44,9 +43,9 @@ class BuilderStub:
         self._reg("criar_cmd_res", n)
         return f"RES:{n}"
 
-    def criar_cmd_mem_store(self, valor, nome, linha):
-        self._reg("criar_cmd_mem_store", valor, nome)
-        return f"STORE:{nome}={valor}"
+    def criar_cmd_mem_store(self, valor_no, nome, linha):
+        self._reg("criar_cmd_mem_store", valor_no, nome)
+        return f"STORE:{nome}={valor_no}"
 
     def criar_cmd_mem_load(self, nome, linha):
         self._reg("criar_cmd_mem_load", nome)
@@ -192,7 +191,7 @@ def test_cmd_mem_store():
     b = BuilderStub()
     parsear(tokens, {}, b)
     stores = [c for c in b.chamadas if c[0] == "criar_cmd_mem_store"]
-    assert stores[0][1] == "10" and stores[0][2] == "VALOR"
+    assert stores[0][1] == "NUM:10" and stores[0][2] == "VALOR"
 
 def test_cmd_mem_load():
     inner = _tokens(

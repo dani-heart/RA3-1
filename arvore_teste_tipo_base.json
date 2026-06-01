@@ -1,0 +1,32 @@
+{
+  "tipo": "PROGRAMA",
+  "valor": null,
+  "linha": 2,
+  "filhos": [
+    {
+      "tipo": "EXPR",
+      "valor": null,
+      "linha": 3,
+      "filhos": [
+        {
+          "tipo": "OPERANDO",
+          "valor": "3",
+          "linha": 3,
+          "filhos": []
+        },
+        {
+          "tipo": "OPERANDO",
+          "valor": "4.5",
+          "linha": 3,
+          "filhos": []
+        },
+        {
+          "tipo": "OP",
+          "valor": "+",
+          "linha": 3,
+          "filhos": []
+        }
+      ]
+    }
+  ]
+}

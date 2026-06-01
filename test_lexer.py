@@ -1,12 +1,13 @@
 # Integrantes do grupo (ordem alfabética):
 # Dani Heart Basso - @dani-heart
-# Mariana Alves da Silva - @himarialves
 #
-# Nome do grupo no Canvas: RA2-18
+# Nome do grupo no Canvas: RA3-1
 
 import pytest
 from lexer import lerTokens, Token, _classificar_token
 import tempfile, os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 def _arquivo_temp(conteudo: str) -> str:
@@ -172,7 +173,7 @@ def test_ler_tokens_linhas_vazias_ignoradas():
         os.unlink(caminho)
 
 def test_ler_tokens_teste1():
-    tokens = lerTokens("teste1.txt")
+    tokens = lerTokens(os.path.join(BASE_DIR, "teste1.txt"))
     tipos = [t.tipo for t in tokens]
     assert "START" in tipos
     assert "END" in tipos
@@ -182,12 +183,12 @@ def test_ler_tokens_teste1():
     assert "WHILE" in tipos
 
 def test_ler_tokens_teste2():
-    tokens = lerTokens("teste2.txt")
+    tokens = lerTokens(os.path.join(BASE_DIR, "teste2.txt"))
     tipos = [t.tipo for t in tokens]
     assert "START" in tipos and "END" in tipos
 
 def test_ler_tokens_teste3():
-    tokens = lerTokens("teste3.txt")
+    tokens = lerTokens(os.path.join(BASE_DIR, "teste3.txt"))
     tipos = [t.tipo for t in tokens]
     assert "START" in tipos and "END" in tipos
 

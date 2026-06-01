@@ -1,0 +1,25 @@
+{
+  "VALOR": {
+    "nome": "VALOR",
+    "linha_definicao": 9,
+    "tipo_inferido": "int",
+    "linhas_uso": [
+      11,
+      13
+    ]
+  },
+  "CONT": {
+    "nome": "CONT",
+    "linha_definicao": 10,
+    "tipo_inferido": "int",
+    "linhas_uso": [
+      14
+    ]
+  },
+  "RESULTADO": {
+    "nome": "RESULTADO",
+    "linha_definicao": 13,
+    "tipo_inferido": "int",
+    "linhas_uso": []
+  }
+}

@@ -1,4 +1,20 @@
 (START)
-(10 OUTRAVAR)
+*{ Erro 1: Uso de variavel antes de ser declarada }*
 (MINHAVAR)
+
+*{ Erro 2: Reatribuicao com tipo incompativel }*
+(10 OUTRAVAR)
+(5.5 OUTRAVAR)
+
+*{ Erros 3 e 4: IF exigindo bool e erro de operacao incompativel }*
+( ((10.0 2 +) 5 >) (LET (1 MINHAVAR) ) IF )
+
+*{ Erro 5: Comando especial com tipo invalido }*
+(2.5 RES)
+
+*{ Erro 6: Operador exigindo tipos exatos (int para modulo) }*
+(10.0 2.0 %)
+
+*{ Erro 7: Operador exigindo tipos exatos (double para divisao real) }*
+(10 2 |)
 (END)

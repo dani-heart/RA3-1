@@ -1,0 +1,420 @@
+{
+  "tipo": "PROGRAMA",
+  "valor": null,
+  "linha": 1,
+  "tipo_dado": null,
+  "filhos": [
+    {
+      "tipo": "CMD_MEM_STORE",
+      "valor": null,
+      "linha": 5,
+      "tipo_dado": "double",
+      "filhos": [
+        {
+          "tipo": "OPERANDO",
+          "valor": "4.0",
+          "linha": 5,
+          "tipo_dado": "double",
+          "filhos": []
+        },
+        {
+          "tipo": "MEM_ID",
+          "valor": "X",
+          "linha": 5,
+          "tipo_dado": null,
+          "filhos": []
+        }
+      ]
+    },
+    {
+      "tipo": "EXPR",
+      "valor": null,
+      "linha": 8,
+      "tipo_dado": "double",
+      "filhos": [
+        {
+          "tipo": "EXPR",
+          "valor": null,
+          "linha": 8,
+          "tipo_dado": "double",
+          "filhos": [
+            {
+              "tipo": "EXPR",
+              "valor": null,
+              "linha": 8,
+              "tipo_dado": "double",
+              "filhos": [
+                {
+                  "tipo": "EXPR",
+                  "valor": null,
+                  "linha": 8,
+                  "tipo_dado": "double",
+                  "filhos": [
+                    {
+                      "tipo": "OPERANDO",
+                      "valor": "3.0",
+                      "linha": 8,
+                      "tipo_dado": "double",
+                      "filhos": []
+                    },
+                    {
+                      "tipo": "EXPR",
+                      "valor": null,
+                      "linha": 8,
+                      "tipo_dado": "double",
+                      "filhos": [
+                        {
+                          "tipo": "MEM_ID",
+                          "valor": "X",
+                          "linha": 8,
+                          "tipo_dado": "double",
+                          "filhos": []
+                        },
+                        {
+                          "tipo": "OPERANDO",
+                          "valor": "3.0",
+                          "linha": 8,
+                          "tipo_dado": "double",
+                          "filhos": []
+                        },
+                        {
+                          "tipo": "OP",
+                          "valor": "^",
+                          "linha": 8,
+                          "tipo_dado": null,
+                          "filhos": []
+                        }
+                      ]
+                    },
+                    {
+                      "tipo": "OP",
+                      "valor": "*",
+                      "linha": 8,
+                      "tipo_dado": null,
+                      "filhos": []
+                    }
+                  ]
+                },
+                {
+                  "tipo": "EXPR",
+                  "valor": null,
+                  "linha": 8,
+                  "tipo_dado": "double",
+                  "filhos": [
+                    {
+                      "tipo": "OPERANDO",
+                      "valor": "5.0",
+                      "linha": 8,
+                      "tipo_dado": "double",
+                      "filhos": []
+                    },
+                    {
+                      "tipo": "EXPR",
+                      "valor": null,
+                      "linha": 8,
+                      "tipo_dado": "double",
+                      "filhos": [
+                        {
+                          "tipo": "MEM_ID",
+                          "valor": "X",
+                          "linha": 8,
+                          "tipo_dado": "double",
+                          "filhos": []
+                        },
+                        {
+                          "tipo": "OPERANDO",
+                          "valor": "2.0",
+                          "linha": 8,
+                          "tipo_dado": "double",
+                          "filhos": []
+                        },
+                        {
+                          "tipo": "OP",
+                          "valor": "^",
+                          "linha": 8,
+                          "tipo_dado": null,
+                          "filhos": []
+                        }
+                      ]
+                    },
+                    {
+                      "tipo": "OP",
+                      "valor": "*",
+                      "linha": 8,
+                      "tipo_dado": null,
+                      "filhos": []
+                    }
+                  ]
+                },
+                {
+                  "tipo": "OP",
+                  "valor": "-",
+                  "linha": 8,
+                  "tipo_dado": null,
+                  "filhos": []
+                }
+              ]
+            },
+            {
+              "tipo": "EXPR",
+              "valor": null,
+              "linha": 8,
+              "tipo_dado": "double",
+              "filhos": [
+                {
+                  "tipo": "OPERANDO",
+                  "valor": "2.0",
+                  "linha": 8,
+                  "tipo_dado": "double",
+                  "filhos": []
+                },
+                {
+                  "tipo": "MEM_ID",
+                  "valor": "X",
+                  "linha": 8,
+                  "tipo_dado": "double",
+                  "filhos": []
+                },
+                {
+                  "tipo": "OP",
+                  "valor": "*",
+                  "linha": 8,
+                  "tipo_dado": null,
+                  "filhos": []
+                }
+              ]
+            },
+            {
+              "tipo": "OP",
+              "valor": "+",
+              "linha": 8,
+              "tipo_dado": null,
+              "filhos": []
+            }
+          ]
+        },
+        {
+          "tipo": "OPERANDO",
+          "valor": "10.0",
+          "linha": 8,
+          "tipo_dado": "double",
+          "filhos": []
+        },
+        {
+          "tipo": "OP",
+          "valor": "-",
+          "linha": 8,
+          "tipo_dado": null,
+          "filhos": []
+        }
+      ]
+    },
+    {
+      "tipo": "CMD_MEM_STORE",
+      "valor": null,
+      "linha": 10,
+      "tipo_dado": "int",
+      "filhos": [
+        {
+          "tipo": "OPERANDO",
+          "valor": "1",
+          "linha": 10,
+          "tipo_dado": "int",
+          "filhos": []
+        },
+        {
+          "tipo": "MEM_ID",
+          "valor": "ATIVO",
+          "linha": 10,
+          "tipo_dado": null,
+          "filhos": []
+        }
+      ]
+    },
+    {
+      "tipo": "WHILE",
+      "valor": null,
+      "linha": 12,
+      "tipo_dado": null,
+      "filhos": [
+        {
+          "tipo": "EXPR",
+          "valor": null,
+          "linha": 12,
+          "tipo_dado": "bool",
+          "filhos": [
+            {
+              "tipo": "MEM_ID",
+              "valor": "ATIVO",
+              "linha": 12,
+              "tipo_dado": "int",
+              "filhos": []
+            },
+            {
+              "tipo": "OPERANDO",
+              "valor": "1",
+              "linha": 12,
+              "tipo_dado": "int",
+              "filhos": []
+            },
+            {
+              "tipo": "OP",
+              "valor": "==",
+              "linha": 12,
+              "tipo_dado": null,
+              "filhos": []
+            }
+          ]
+        },
+        {
+          "tipo": "BLOCO",
+          "valor": null,
+          "linha": 12,
+          "tipo_dado": null,
+          "filhos": [
+            {
+              "tipo": "IF",
+              "valor": null,
+              "linha": 13,
+              "tipo_dado": null,
+              "filhos": [
+                {
+                  "tipo": "EXPR",
+                  "valor": null,
+                  "linha": 13,
+                  "tipo_dado": "bool",
+                  "filhos": [
+                    {
+                      "tipo": "MEM_ID",
+                      "valor": "X",
+                      "linha": 13,
+                      "tipo_dado": "double",
+                      "filhos": []
+                    },
+                    {
+                      "tipo": "OPERANDO",
+                      "valor": "0.0",
+                      "linha": 13,
+                      "tipo_dado": "double",
+                      "filhos": []
+                    },
+                    {
+                      "tipo": "OP",
+                      "valor": ">",
+                      "linha": 13,
+                      "tipo_dado": null,
+                      "filhos": []
+                    }
+                  ]
+                },
+                {
+                  "tipo": "BLOCO",
+                  "valor": null,
+                  "linha": 13,
+                  "tipo_dado": null,
+                  "filhos": [
+                    {
+                      "tipo": "EXPR",
+                      "valor": null,
+                      "linha": 14,
+                      "tipo_dado": "double",
+                      "filhos": [
+                        {
+                          "tipo": "EXPR",
+                          "valor": null,
+                          "linha": 14,
+                          "tipo_dado": "double",
+                          "filhos": [
+                            {
+                              "tipo": "EXPR",
+                              "valor": null,
+                              "linha": 14,
+                              "tipo_dado": "double",
+                              "filhos": [
+                                {
+                                  "tipo": "MEM_ID",
+                                  "valor": "X",
+                                  "linha": 14,
+                                  "tipo_dado": "double",
+                                  "filhos": []
+                                },
+                                {
+                                  "tipo": "OPERANDO",
+                                  "valor": "2.0",
+                                  "linha": 14,
+                                  "tipo_dado": "double",
+                                  "filhos": []
+                                },
+                                {
+                                  "tipo": "OP",
+                                  "valor": "^",
+                                  "linha": 14,
+                                  "tipo_dado": null,
+                                  "filhos": []
+                                }
+                              ]
+                            },
+                            {
+                              "tipo": "OPERANDO",
+                              "valor": "1.0",
+                              "linha": 14,
+                              "tipo_dado": "double",
+                              "filhos": []
+                            },
+                            {
+                              "tipo": "OP",
+                              "valor": "+",
+                              "linha": 14,
+                              "tipo_dado": null,
+                              "filhos": []
+                            }
+                          ]
+                        },
+                        {
+                          "tipo": "OPERANDO",
+                          "valor": "2.0",
+                          "linha": 14,
+                          "tipo_dado": "double",
+                          "filhos": []
+                        },
+                        {
+                          "tipo": "OP",
+                          "valor": "|",
+                          "linha": 14,
+                          "tipo_dado": null,
+                          "filhos": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tipo": "CMD_MEM_STORE",
+              "valor": null,
+              "linha": 16,
+              "tipo_dado": "int",
+              "filhos": [
+                {
+                  "tipo": "OPERANDO",
+                  "valor": "0",
+                  "linha": 16,
+                  "tipo_dado": "int",
+                  "filhos": []
+                },
+                {
+                  "tipo": "MEM_ID",
+                  "valor": "ATIVO",
+                  "linha": 16,
+                  "tipo_dado": null,
+                  "filhos": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
